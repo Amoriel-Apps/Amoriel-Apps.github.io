@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support · Quit Munchies</title>
+<link rel="icon" type="image/png" href="app-icon.png">
+<link rel="apple-touch-icon" href="app-icon.png">
+<meta name="description" content="Help and feedback for Quit Munchies: email us, restore purchases, cancel, back up and more.">
+<style>
+  :root {
+    --ground: #F7F4EC; --card: #FFFFFF; --ink: #1F2A2E; --muted: #55625F; --line: #E6E0D2;
+    --primary: #2F7D6B; --soft: #E3F2EC; --mark: #FFF1C2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --ground: #141819; --card: #1F2528; --ink: #F1EEE7; --muted: #A9B3B0; --line: #2E373A;
+            --primary: #86D9C5; --soft: #1D3530; --mark: #4A3D12; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--ground); color: var(--ink);
+    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 40px 20px 64px; }
+  header { margin-bottom: 28px; }
+  .app img { width: 28px; height: 28px; border-radius: 7px; vertical-align: middle; margin-right: 8px; }
+  .app { display: inline-block; font-weight: 800; color: var(--primary); letter-spacing: .02em; font-size: 15px; }
+  h1 { font-size: 34px; line-height: 1.2; margin: 4px 0 6px; }
+  .updated { color: var(--muted); font-size: 15px; margin: 0; }
+  h2 { font-size: 21px; margin: 32px 0 8px; }
+  p, li { color: var(--ink); }
+  ul { padding-left: 22px; }
+  li { margin: 4px 0; }
+  .summary { background: var(--soft); border-radius: 16px; padding: 6px 20px; margin: 20px 0 8px; }
+  .summary h2 { margin-top: 14px; }
+  a { color: var(--primary); }
+  mark { background: var(--mark); color: inherit; padding: 0 3px; border-radius: 4px; }
+  footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 15px; }
+  address { font-style: normal; }
+  @media (max-width: 480px) { body { font-size: 16px; } h1 { font-size: 28px; } }
+</style>
+<style>
+  nav { display: flex; gap: 18px; flex-wrap: wrap; margin: 0 0 28px; font-size: 15px; font-weight: 700; }
+  nav a { text-decoration: none; color: var(--muted); }
+  nav a[aria-current="page"] { color: var(--primary); text-decoration: underline; text-underline-offset: 4px; }
+  .button { display: inline-block; background: var(--primary); color: var(--ground); text-decoration: none; font-weight: 800;
+            padding: 14px 22px; border-radius: 14px; margin: 6px 0 4px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 4px 20px 12px; margin: 14px 0; }
+  .card h3 { font-size: 18px; margin: 14px 0 4px; }
+  .maker { display: flex; align-items: center; gap: 10px; margin-top: 18px; color: var(--muted); font-size: 15px; }
+  .maker img { width: 32px; height: 32px; border-radius: 8px; }
+</style>
+</head>
+<body>
+<main>
+  <nav aria-label="Quit Munchies pages"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html" aria-current="page">Support</a></nav>
+  <header>
+    <span class="app"><img src="app-icon.png" alt="">QUIT MUNCHIES</span>
+    <h1>Support &amp; feedback</h1>
+    <p class="updated">Something not working, an idea, or just want to say hi? We read every email.</p>
+  </header>
+
+  <section class="summary">
+    <h2>Email us</h2>
+    <p><a class="button" href="mailto:amorielapps@gmail.com?subject=Quit%20Munchies%20support">Email support</a></p>
+    <p style="margin-top:4px">Or write to <a href="mailto:amorielapps@gmail.com">amorielapps@gmail.com</a>. It helps to include your iPhone model, iOS version and the app version (Settings › About in the app). A screenshot is even better.</p>
+  </section>
+
+  <h2>Quick answers</h2>
+
+  <div class="card">
+    <h3>I bought Plus but it isn’t showing</h3>
+    <p>Open the app, go to Settings › Munchies Plus and tap <strong>Restore purchases</strong>. Make sure you’re signed in to the same Apple ID you bought it with.</p>
+  </div>
+
+  <div class="card">
+    <h3>How do I cancel my subscription?</h3>
+    <p>On your iPhone, open Settings › your name › Subscriptions › Quit Munchies. Cancel at least 24 hours before it renews. Lifetime Plus never renews, so there’s nothing to cancel.</p>
+  </div>
+
+  <div class="card">
+    <h3>How do I get a refund?</h3>
+    <p>Purchases go through Apple, so refunds do too: request one at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+  </div>
+
+  <div class="card">
+    <h3>I’m moving to a new phone. How do I keep my jar?</h3>
+    <p>Easiest: <strong>Sign in with Apple</strong> (Settings › Account) and your jar is backed up automatically. On the new phone, sign in on the welcome screen and everything comes back. Prefer no account? Use Settings › Your data › <strong>Save a backup</strong>, keep the file somewhere safe (Files, iCloud Drive or email it to yourself), then <strong>Restore from a backup</strong> on the new phone.</p>
+  </div>
+
+  <div class="card">
+    <h3>I logged something by mistake</h3>
+    <p>Tap <strong>Undo</strong> on the message right after logging, or open the Jar tab and tap the entry in your history to remove it.</p>
+  </div>
+
+  <div class="card">
+    <h3>Check-ins aren’t arriving</h3>
+    <p>Check that they’re on in the app (Settings › Check-ins) and that notifications are allowed for Quit Munchies in your iPhone’s Settings › Notifications. They’re skipped on days you’ve already logged an order.</p>
+  </div>
+
+  <div class="card">
+    <h3>How do I delete my data?</h3>
+    <p>Settings › Your data › <strong>Delete all my data</strong> erases everything on this phone. If you signed in with Apple, Settings › Account › <strong>Delete account</strong> also deletes your account and your cloud backup for good. See the <a href="privacy.html">Privacy Policy</a>.</p>
+  </div>
+
+  <footer>
+    <p><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a></p>
+    <p class="maker"><img src="amoriel-logo.png" alt="Amoriel Apps logo"> Quit Munchies is made by <a href="/">Amoriel Apps</a></p>
+  </footer>
+</main>
+</body>
+</html>

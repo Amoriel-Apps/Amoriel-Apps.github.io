@@ -252,6 +252,56 @@
     a.link { color: var(--red); text-decoration: none; font-weight: 550; }
     a.link:hover { text-decoration: underline; }
 
+    .project-list { display: grid; gap: 18px; }
+
+    .project {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 26px;
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .project img { width: 72px; height: 72px; border-radius: 17px; display: block; }
+
+    .project h3 { margin: 0 0 6px; font-size: 1.2rem; letter-spacing: -0.02em; }
+
+    .project-body > p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+
+    .status {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--red);
+      background: rgba(232, 80, 60, 0.08);
+      border: 1px solid rgba(232, 80, 60, 0.18);
+      border-radius: 999px;
+      padding: 3px 11px;
+      margin-bottom: 10px;
+    }
+
+    .links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+
+    .pill {
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 550;
+    }
+
+    .pill:hover { border-color: var(--red); color: var(--red); }
+
     footer {
       padding: 36px 0 56px;
       border-top: 1px solid var(--border);
@@ -273,6 +323,7 @@
       }
       .hero-art { order: -1; }
       .hero-art img { margin: 0 auto; max-width: 180px; }
+      .project { grid-template-columns: 1fr; }
       nav a { margin: 0 18px 0 0; }
     }
   </style>
@@ -288,7 +339,7 @@
       </a>
       <nav>
         <a href="#what-we-do">What we do</a>
-        <a href="#work">Work</a>
+        <a href="#projects">Projects</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -304,7 +355,7 @@
         </p>
         <div class="actions">
           <a class="btn btn-primary" href="#contact">Start a project</a>
-          <a class="btn btn-ghost" href="#what-we-do">See what we do</a>
+          <a class="btn btn-ghost" href="#projects">See our apps</a>
         </div>
       </div>
       <div class="hero-art">
@@ -339,16 +390,25 @@
       </div>
     </section>
 
-    <section id="work">
-      <h2>Work</h2>
-      <p class="section-sub">Project write-ups are on the way.</p>
-      <div class="grid">
-        <div class="card">
-          <div class="dot"></div>
-          <h3>Coming soon</h3>
-          <p>In the meantime, get in touch and we'll walk you through what we've shipped.</p>
+    <section id="projects">
+      <h2>Projects</h2>
+      <p class="section-sub">Apps we've built, with their support and legal pages.</p>
+      <div class="project-list">
+        <div class="project">
+          <img src="projects/quit-munchies/app-icon.png" alt="Quit Munchies app icon">
+          <div class="project-body">
+            <span class="status">iOS</span>
+            <h3>Quit Munchies: Habit Tracker</h3>
+            <p>Order less food delivery, keep more of your money — with a pup who cheers you on.</p>
+            <div class="links">
+              <a class="pill" href="projects/quit-munchies/support.html">Support</a>
+              <a class="pill" href="projects/quit-munchies/privacy.html">Privacy Policy</a>
+              <a class="pill" href="projects/quit-munchies/terms.html">Terms of Use</a>
+            </div>
+          </div>
         </div>
       </div>
+      <p style="margin-top:20px"><a class="link" href="projects/">All projects &rarr;</a></p>
     </section>
 
     <section id="about">
