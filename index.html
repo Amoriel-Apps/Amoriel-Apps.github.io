@@ -3,443 +3,193 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amoriel Apps</title>
-  <meta name="description" content="Amoriel Apps — an app development studio building thoughtful mobile and web products.">
-  <link rel="icon" href="favicon.png" type="image/png">
-  <link rel="apple-touch-icon" href="logo-512.png">
-  <meta property="og:title" content="Amoriel Apps">
-  <meta property="og:description" content="An app development studio building thoughtful mobile and web products.">
-  <meta property="og:image" content="logo-512.png">
-  <style>
-    :root {
-      --bg: #fdf6ec;
-      --surface: #fffaf3;
-      --text: #241a14;
-      --muted: #7a6a5e;
-      --red: #e8503c;
-      --orange: #f9a227;
-      --border: rgba(36, 26, 20, 0.10);
-      --shadow: 0 1px 2px rgba(36, 26, 20, 0.04), 0 8px 24px rgba(36, 26, 20, 0.05);
-    }
+  <title>Amoriel Apps — App development studio</title>
+  <meta name="description" content="Amoriel Apps is an app development studio building thoughtful mobile and web products, from first sketch through release.">
+  <link rel="canonical" href="https://amoriel-apps.github.io/">
+  <meta name="theme-color" content="#fdf6ec" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#17110d" media="(prefers-color-scheme: dark)">
 
-    * { box-sizing: border-box; }
+  <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
 
-    html { scroll-behavior: smooth; }
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Amoriel Apps">
+  <meta property="og:title" content="Amoriel Apps — App development studio">
+  <meta property="og:description" content="We design and ship mobile and web products, from first sketch through release.">
+  <meta property="og:url" content="https://amoriel-apps.github.io/">
+  <meta property="og:image" content="https://amoriel-apps.github.io/assets/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Amoriel Apps — App development studio">
+  <meta name="twitter:description" content="We design and ship mobile and web products, from first sketch through release.">
+  <meta name="twitter:image" content="https://amoriel-apps.github.io/assets/og-card.png">
 
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
+  <link rel="stylesheet" href="/assets/site.css">
 
-    .glow {
-      position: fixed;
-      inset: 0;
-      background:
-        radial-gradient(720px circle at 12% 0%, rgba(232, 80, 60, 0.10), transparent 62%),
-        radial-gradient(620px circle at 92% 18%, rgba(249, 162, 39, 0.12), transparent 60%);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .wrap {
-      position: relative;
-      z-index: 1;
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 22px 0;
-      flex-wrap: wrap;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 650;
-      letter-spacing: -0.015em;
-      font-size: 1.08rem;
-      color: var(--text);
-      text-decoration: none;
-    }
-
-    .logo img {
-      width: 38px;
-      height: 38px;
-      display: block;
-      border-radius: 10px;
-    }
-
-    nav a {
-      color: var(--muted);
-      text-decoration: none;
-      margin-left: 22px;
-      font-size: 0.92rem;
-    }
-
-    nav a:hover { color: var(--red); }
-
-    .hero {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      align-items: center;
-      gap: 40px;
-      padding: 64px 0 72px;
-    }
-
-    .hero-art img {
-      width: 100%;
-      max-width: 320px;
-      margin-left: auto;
-      display: block;
-      border-radius: 28px;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-      color: var(--red);
-      background: rgba(232, 80, 60, 0.08);
-      border: 1px solid rgba(232, 80, 60, 0.18);
-      border-radius: 999px;
-      padding: 5px 13px;
-      margin-bottom: 22px;
-    }
-
-    h1 {
-      font-size: clamp(2.1rem, 5.5vw, 3.4rem);
-      line-height: 1.08;
-      letter-spacing: -0.03em;
-      margin: 0 0 18px;
-    }
-
-    h1 span {
-      background: linear-gradient(120deg, var(--red), var(--orange));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .lede {
-      font-size: 1.08rem;
-      color: var(--muted);
-      margin: 0 0 30px;
-      max-width: 54ch;
-    }
-
-    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 22px;
-      border-radius: 11px;
-      text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: 600;
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
-    }
-
-    .btn:hover { transform: translateY(-1px); }
-
-    .btn-primary {
-      background: linear-gradient(120deg, var(--red), var(--orange));
-      color: #fff;
-      box-shadow: 0 6px 18px rgba(232, 80, 60, 0.26);
-    }
-
-    .btn-primary:hover { box-shadow: 0 10px 24px rgba(232, 80, 60, 0.32); }
-
-    .btn-ghost {
-      border: 1px solid var(--border);
-      color: var(--text);
-      background: var(--surface);
-    }
-
-    section { padding: 56px 0; border-top: 1px solid var(--border); }
-
-    h2 {
-      font-size: 1.45rem;
-      letter-spacing: -0.02em;
-      margin: 0 0 8px;
-    }
-
-    .section-sub {
-      color: var(--muted);
-      margin: 0 0 28px;
-      font-size: 0.98rem;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 18px;
-    }
-
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 24px;
-      box-shadow: var(--shadow);
-    }
-
-    .card .dot {
-      width: 28px;
-      height: 28px;
-      border-radius: 9px;
-      background: linear-gradient(135deg, var(--red), var(--orange));
-      margin-bottom: 14px;
-    }
-
-    .card h3 {
-      margin: 0 0 8px;
-      font-size: 1rem;
-      letter-spacing: -0.01em;
-    }
-
-    .card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    .about {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 18px;
-      align-items: start;
-    }
-
-    .owner {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 24px;
-      box-shadow: var(--shadow);
-    }
-
-    .owner .label {
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 6px;
-    }
-
-    .owner .name {
-      font-size: 1.15rem;
-      font-weight: 650;
-      letter-spacing: -0.015em;
-      margin-bottom: 4px;
-    }
-
-    .owner .role { color: var(--muted); font-size: 0.92rem; margin: 0; }
-
-    a.link { color: var(--red); text-decoration: none; font-weight: 550; }
-    a.link:hover { text-decoration: underline; }
-
-    .project-list { display: grid; gap: 18px; }
-
-    .project {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 26px;
-      box-shadow: var(--shadow);
-      display: grid;
-      grid-template-columns: 72px 1fr;
-      gap: 20px;
-      align-items: start;
-    }
-
-    .project img { width: 72px; height: 72px; border-radius: 17px; display: block; }
-
-    .project h3 { margin: 0 0 6px; font-size: 1.2rem; letter-spacing: -0.02em; }
-
-    .project-body > p { margin: 0; color: var(--muted); font-size: 0.95rem; }
-
-    .status {
-      display: inline-block;
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      color: var(--red);
-      background: rgba(232, 80, 60, 0.08);
-      border: 1px solid rgba(232, 80, 60, 0.18);
-      border-radius: 999px;
-      padding: 3px 11px;
-      margin-bottom: 10px;
-    }
-
-    .links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
-
-    .pill {
-      display: inline-block;
-      padding: 8px 16px;
-      border-radius: 10px;
-      border: 1px solid var(--border);
-      background: var(--bg);
-      color: var(--text);
-      text-decoration: none;
-      font-size: 0.88rem;
-      font-weight: 550;
-    }
-
-    .pill:hover { border-color: var(--red); color: var(--red); }
-
-    footer {
-      padding: 36px 0 56px;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      font-size: 0.87rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 24px;
-      justify-content: space-between;
-    }
-
-    footer a { color: var(--muted); }
-
-    @media (max-width: 760px) {
-      .hero {
-        grid-template-columns: 1fr;
-        padding: 40px 0 56px;
-        gap: 28px;
-      }
-      .hero-art { order: -1; }
-      .hero-art img { margin: 0 auto; max-width: 180px; }
-      .project { grid-template-columns: 1fr; }
-      nav a { margin: 0 18px 0 0; }
-    }
-  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Amoriel Apps",
+    "url": "https://amoriel-apps.github.io/",
+    "logo": "https://amoriel-apps.github.io/assets/icon-512.png",
+    "email": "amorielapps@gmail.com",
+    "founder": { "@type": "Person", "name": "Pratik P Shringarpure" }
+  }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <div class="glow"></div>
 
   <div class="wrap">
     <header>
-      <a class="logo" href="#top">
-        <img src="logo-512.png" alt="Amoriel Apps logo">
+      <a class="logo" href="/">
+        <img src="/assets/mark.png" alt="" width="34" height="34">
         Amoriel Apps
       </a>
-      <nav>
+      <nav aria-label="Main">
         <a href="#what-we-do">What we do</a>
-        <a href="#projects">Projects</a>
+        <a href="/projects/">Projects</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
-    <div class="hero" id="top">
-      <div>
-        <span class="eyebrow">App development studio</span>
-        <h1>We build apps people <span>actually keep</span>.</h1>
-        <p class="lede">
-          Amoriel Apps designs and ships mobile and web products — from the first sketch
-          through release, and everything that comes after.
-        </p>
-        <div class="actions">
-          <a class="btn btn-primary" href="#contact">Start a project</a>
-          <a class="btn btn-ghost" href="#projects">See our apps</a>
+    <main id="main">
+      <div class="hero">
+        <div>
+          <span class="eyebrow">App development studio</span>
+          <h1>We build apps people <span class="accent">actually keep</span>.</h1>
+          <p class="lede">
+            Amoriel Apps designs and ships mobile and web products — from the first sketch
+            through release, and everything that comes after.
+          </p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#contact">Start a project</a>
+            <a class="btn btn-ghost" href="#projects">See our apps</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img src="/assets/mark.png" alt="Amoriel Apps logo" width="300" height="300">
         </div>
       </div>
-      <div class="hero-art">
-        <img src="logo-512.png" alt="">
-      </div>
-    </div>
 
-    <section id="what-we-do">
-      <h2>What we do</h2>
-      <p class="section-sub">End to end, or dropped into the part you need help with.</p>
-      <div class="grid">
-        <div class="card">
-          <div class="dot"></div>
-          <h3>Mobile apps</h3>
-          <p>Native and cross-platform apps for iOS and Android, built to feel at home on the platform.</p>
+      <section id="what-we-do">
+        <h2>What we do</h2>
+        <p class="section-sub">End to end, or dropped into the part you need help with.</p>
+        <div class="grid">
+          <div class="card">
+            <div class="dot"></div>
+            <h3>Mobile apps</h3>
+            <p>Native and cross-platform apps for iOS and Android, built to feel at home on the platform.</p>
+          </div>
+          <div class="card">
+            <div class="dot"></div>
+            <h3>Web apps</h3>
+            <p>Fast, responsive products and dashboards with clean, maintainable front ends.</p>
+          </div>
+          <div class="card">
+            <div class="dot"></div>
+            <h3>Product &amp; design</h3>
+            <p>Scoping, prototyping, and interface design so the build starts from a clear picture.</p>
+          </div>
+          <div class="card">
+            <div class="dot"></div>
+            <h3>Ship &amp; support</h3>
+            <p>Store releases, analytics, and ongoing iteration once your users arrive.</p>
+          </div>
         </div>
-        <div class="card">
-          <div class="dot"></div>
-          <h3>Web apps</h3>
-          <p>Fast, responsive products and dashboards with clean, maintainable front ends.</p>
-        </div>
-        <div class="card">
-          <div class="dot"></div>
-          <h3>Product &amp; design</h3>
-          <p>Scoping, prototyping, and interface design so the build starts from a clear picture.</p>
-        </div>
-        <div class="card">
-          <div class="dot"></div>
-          <h3>Ship &amp; support</h3>
-          <p>Store releases, analytics, and ongoing iteration once your users arrive.</p>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <p class="section-sub">Apps we've built, with their support and legal pages.</p>
-      <div class="project-list">
-        <div class="project">
-          <img src="projects/quit-munchies/app-icon.png" alt="Quit Munchies app icon">
-          <div class="project-body">
-            <span class="status">iOS</span>
-            <h3>Quit Munchies: Habit Tracker</h3>
-            <p>Order less food delivery, keep more of your money — with a pup who cheers you on.</p>
-            <div class="links">
-              <a class="pill" href="projects/quit-munchies/support.html">Support</a>
-              <a class="pill" href="projects/quit-munchies/privacy.html">Privacy Policy</a>
-              <a class="pill" href="projects/quit-munchies/terms.html">Terms of Use</a>
+      <section id="projects">
+        <h2>Projects</h2>
+        <p class="section-sub">Apps we've built, with their support and legal pages.</p>
+        <div class="project-list">
+          <div class="project">
+            <img src="/projects/quit-munchies/app-icon.png" alt="Quit Munchies app icon" width="72" height="72">
+            <div class="project-body">
+              <span class="status">iOS</span>
+              <h3>Quit Munchies: Habit Tracker</h3>
+              <p>Order less food delivery, keep more of your money — with a pup who cheers you on.</p>
+              <div class="links">
+                <a class="pill" href="/projects/quit-munchies/support.html">Support</a>
+                <a class="pill" href="/projects/quit-munchies/privacy.html">Privacy Policy</a>
+                <a class="pill" href="/projects/quit-munchies/terms.html">Terms of Use</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <p style="margin-top:20px"><a class="link" href="projects/">All projects &rarr;</a></p>
-    </section>
+        <p style="margin-top:20px"><a class="link" href="/projects/">All projects &rarr;</a></p>
+      </section>
 
-    <section id="about">
-      <h2>About</h2>
-      <p class="section-sub">A small studio with a short line between you and the person building it.</p>
-      <div class="about">
-        <div class="owner">
-          <div class="label">Owner &amp; developer</div>
-          <div class="name">Pratik P Shringarpure</div>
-          <p class="role">Founder, Amoriel Apps</p>
+      <section id="about">
+        <h2>About</h2>
+        <p class="section-sub">A small studio with a short line between you and the person building it.</p>
+        <div class="about">
+          <div class="owner">
+            <div class="label">Owner &amp; developer</div>
+            <div class="name">Pratik P Shringarpure</div>
+            <p class="role">Founder, Amoriel Apps</p>
+          </div>
+          <div class="owner">
+            <div class="label">Get in touch</div>
+            <div class="name"><a class="link" href="mailto:amorielapps@gmail.com">amorielapps@gmail.com</a></div>
+            <p class="role">Usually replies within a day or two.</p>
+          </div>
         </div>
-        <div class="owner">
-          <div class="label">Get in touch</div>
-          <div class="name"><a class="link" href="mailto:amorielapps@gmail.com">amorielapps@gmail.com</a></div>
-          <p class="role">Usually replies within a day or two.</p>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="contact">
-      <h2>Get in touch</h2>
-      <p class="section-sub">Have an idea, or an app that needs a second pair of hands? We'd like to hear about it.</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="mailto:amorielapps@gmail.com">Email us</a>
-        <a class="btn btn-ghost" href="https://github.com/Amoriel-Apps">GitHub</a>
-      </div>
-    </section>
+      <section id="contact">
+        <h2>Get in touch</h2>
+        <p class="section-sub">Have an idea, or an app that needs a second pair of hands? We'd like to hear about it.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="mailto:amorielapps@gmail.com">Email us</a>
+          <a class="btn btn-ghost" href="/projects/">Browse our apps</a>
+        </div>
+      </section>
+    </main>
 
     <footer>
-      <span>&copy; 2026 Amoriel Apps — Pratik P Shringarpure. All rights reserved.</span>
-      <span><a href="mailto:amorielapps@gmail.com">amorielapps@gmail.com</a></span>
+      <div class="foot-cols">
+        <div class="foot-brand">
+          <span class="logo">
+            <img src="/assets/mark.png" alt="" width="28" height="28">
+            Amoriel Apps
+          </span>
+          <p>An app development studio building thoughtful mobile and web products.</p>
+        </div>
+        <div>
+          <h4>Studio</h4>
+          <ul>
+            <li><a href="#what-we-do">What we do</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Projects</h4>
+          <ul>
+            <li><a href="/projects/">All projects</a></li>
+            <li><a href="/projects/quit-munchies/">Quit Munchies</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Quit Munchies</h4>
+          <ul>
+            <li><a href="/projects/quit-munchies/support.html">Support</a></li>
+            <li><a href="/projects/quit-munchies/privacy.html">Privacy Policy</a></li>
+            <li><a href="/projects/quit-munchies/terms.html">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot-base">
+        <span>&copy; 2026 Amoriel Apps — Pratik P Shringarpure. All rights reserved.</span>
+        <span><a href="mailto:amorielapps@gmail.com">amorielapps@gmail.com</a></span>
+      </div>
     </footer>
   </div>
 </body>
