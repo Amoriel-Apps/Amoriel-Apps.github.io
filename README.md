@@ -15,6 +15,11 @@ projects/quit-munchies/         Quit Munchies: Habit Tracker
   ├─ support.html
   ├─ privacy.html
   └─ terms.html
+projects/hushbill/              Hushbill
+  ├─ index.html                 redirects to support.html
+  ├─ support.html
+  ├─ privacy.html
+  └─ terms.html
 assets/site.css                 shared stylesheet (light + dark themes)
 assets/mark.png                 logo, transparent background — used on every page
 assets/og-card.png              1200x630 social preview card
@@ -29,17 +34,28 @@ robots.txt, sitemap.xml, site.webmanifest
 
 Live at https://amoriel-apps.github.io
 
+### Quit Munchies: Habit Tracker
+
 | Page | URL |
 | --- | --- |
 | Support | `https://amoriel-apps.github.io/projects/quit-munchies/support.html` |
 | Privacy Policy | `https://amoriel-apps.github.io/projects/quit-munchies/privacy.html` |
 | Terms of Use (EULA) | `https://amoriel-apps.github.io/projects/quit-munchies/terms.html` |
 
+### Hushbill
+
+| Page | URL |
+| --- | --- |
+| Support | `https://amoriel-apps.github.io/projects/hushbill/support.html` |
+| Privacy Policy | `https://amoriel-apps.github.io/projects/hushbill/privacy.html` |
+| Terms of Use (EULA) | `https://amoriel-apps.github.io/projects/hushbill/terms.html` |
+
 ## Conventions
 
 - **One stylesheet.** Studio pages (`index.html`, `projects/`, `404.html`) all pull
   `/assets/site.css`. Change a color there and it changes everywhere. The Quit Munchies
-  pages deliberately keep their own teal styling to match the app.
+  pages deliberately keep their own teal styling to match the app, and the Hushbill pages
+  their own indigo styling.
 - **Themes** come from CSS custom properties under `prefers-color-scheme`. All text/background
   pairs meet WCAG AA (4.5:1) in both themes — check before changing `--solid`, `--link` or `--muted`.
 - **Absolute URLs** in `og:` / `twitter:` / `canonical` tags. Social scrapers reject relative ones.
